@@ -13,7 +13,12 @@ const deviceSchema = new mongoose.Schema({
     iccid: String,
     location: String,
     lastUpdate: String
-});
+}, 
+{
+    versionKey: false
+}
+
+);
 
 const Device = mongoose.model('Device', deviceSchema);
 
