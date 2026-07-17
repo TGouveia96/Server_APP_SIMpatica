@@ -8,10 +8,6 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("MongoDB ligado");
-
-        app.listen(3000, () => {
-            console.log("Servidor a correr");
-        });
     })
     .catch(err => console.error("Erro MongoDB:", err));
 
